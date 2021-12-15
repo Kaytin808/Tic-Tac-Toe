@@ -16,3 +16,22 @@ h1 {
 body {
     background: #4ECDC4;
 }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 25em;
+}
+.cell {
+    height: 130px;
+    background-color: white;
+    border: 1px solid black;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35em;
+}
+.cell:hover {
+    background-color: rgb(216, 214, 214);
+}
