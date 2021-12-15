@@ -23,7 +23,7 @@ body {
 }
 .cell {
     height: 130px;
-    background-color: white;
+    background-color: #F7FFF7;
     border: 1px solid black;
 }
 .container {
@@ -33,5 +33,5 @@ body {
     height: 35em;
 }
 .cell:hover {
-    background-color: rgb(216, 214, 214);
+    background-color: #d7e0d7;
 }
