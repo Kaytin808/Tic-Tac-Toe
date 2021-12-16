@@ -22,9 +22,14 @@ body {
     width: 25em;
 }
 .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 130px;
     background-color: #F7FFF7;
     border: 1px solid black;
+    text-align: center;
+    font-size: 90px;
 }
 .container {
     display: flex;
