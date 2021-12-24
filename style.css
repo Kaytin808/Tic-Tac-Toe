@@ -21,7 +21,9 @@ body {
     grid-template-columns: repeat(3,1fr);
     width: 25em;
 }
-.cell {
+.cell1, .cell2, .cell3,
+.cell4, .cell5, .cell6,
+.cell7, .cell8, .cell9 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,12 +33,17 @@ body {
     text-align: center;
     font-size: 90px;
 }
+.cell1:hover, .cell2:hover,
+.cell3:hover, .cell4:hover,
+.cell5:hover, .cell6:hover,
+.cell7:hover, .cell8:hover,
+.cell9:hover {
+    background-color: #d7e0d7;
+}
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 35em;
 }
-.cell:hover {
-    background-color: #d7e0d7;
-}
+
