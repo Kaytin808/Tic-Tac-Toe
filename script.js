@@ -1,41 +1,45 @@
-var cell1 = document.querySelector('.cell1')
-var cell2 = document.querySelector('.cell2')
-var cell3 = document.querySelector('.cell3')
-var cell4 = document.querySelector('.cell4')
-var cell5 = document.querySelector('.cell5')
-var cell6 = document.querySelector('.cell6')
-var cell7 = document.querySelector('.cell7')
-var cell8 = document.querySelector('.cell8')
-var cell9 = document.querySelector('.cell9')
+var gameBoard = [
+    {
+        box1:''
+    }
+]
 
 
-
-var gameBoard = [];
+var cell = document.querySelectorAll('.cell')
 
 
 
 
-function playGame() {
-cell1.addEventListener('click', () => {
-    cell1.innerHTML = 'x';
-    gameBoard.push('x')
-    checkWin()
-})
-cell2.addEventListener('click', () => {
-    cell2.innerHTML = 'x';
-    gameBoard.push('x')
-    checkWin()
-})
-cell3.addEventListener('click', () => {
-    cell3.innerHTML = 'x';
-    gameBoard.push('x')
-    checkWin()
-})
-cell4.addEventListener('click', () => {
-    cell4.innerHTML = 'x';
-    gameBoard.push('x')
+player1();
+
+function player1 () {
+    cell.forEach((box1) =>{
+        box1.addEventListener('click', () => {
+            box1.innerHTML = 'x'
+
+            player2();
+    })
 })
 }
+
+function player2() {
+cell.forEach((box2) => {
+    box2.addEventListener('click', () => {
+        box2.innerHTML = 'o'
+
+        player1();
+    })
+})
+}
+
+
+
+
+
+
+
+
+
 
 function checkWin() {
     if (cell1.innerHTML == 'x' && cell2.innerHTML == 'x' && cell3.innerHTML == 'x') {
@@ -45,10 +49,3 @@ function checkWin() {
         cell3.innerHTML = ''
     }
 }
-playGame();
-// const playerOne = (myName, age) => {
-//     const sayHello = () => alert('Hello ' + myName + '!');
-//     return { myName, age, sayHello };
-// }
-
-// const justin = playerOne('Justin', 26);
