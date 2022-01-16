@@ -1,4 +1,4 @@
-const gameBoard = [];
+var gameBoard = [];
 const cell = document.querySelectorAll('.cell')
 const firstPlayer = 'o'
 const secondPlayer = 'x'
@@ -22,9 +22,17 @@ function handleClick(e) {
         }
         turn = !turn;
         console.log(gameBoard)
-        checkWinner
+        checkWinner()
         
     }
+}
+// restart game after win/tie 
+function restart() {
+    gameBoard = [];
+    cell.forEach((box1) => {
+     box1.innerHTML = '';
+     currentPlayer = firstPlayer
+ })
 }
 
 // When cells are clicked run this function //
@@ -39,6 +47,7 @@ function checkWinner() {
          gameBoard[2] === currentPlayer) {
              if (currentPlayer == firstPlayer)
          alert(`${currentPlayer} wins!`)
+         restart()
          } else if (gameBoard[0] === currentPlayer &
             gameBoard[3] === currentPlayer &
                 gameBoard[6] === currentPlayer) {
@@ -70,7 +79,3 @@ function checkWinner() {
                                         }
         }
 
-        function restart() {
-           var gameBoard = []
-           cell.innerText = ''
-        }
