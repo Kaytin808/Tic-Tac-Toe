@@ -22,6 +22,8 @@ function handleClick(e) {
         }
         turn = !turn;
         console.log(gameBoard)
+        checkWinner
+        
     }
 }
 
@@ -30,8 +32,45 @@ function handleClick(e) {
         box1.addEventListener('click', handleClick)
     })
 
+
 function checkWinner() {
-    if (gameBoard[2] === firstPlayer) {
-        alert('its same')
-    }
-}
+    if (gameBoard[0] === currentPlayer &
+         gameBoard[1] === currentPlayer &
+         gameBoard[2] === currentPlayer) {
+             if (currentPlayer == firstPlayer)
+         alert(`${currentPlayer} wins!`)
+         } else if (gameBoard[0] === currentPlayer &
+            gameBoard[3] === currentPlayer &
+                gameBoard[6] === currentPlayer) {
+                    alert(`${currentPlayer} wins!`)
+                } else if (gameBoard[3] === currentPlayer &
+                    gameBoard[4] === currentPlayer &
+                    gameBoard[5] === currentPlayer) {
+                        alert(`${currentPlayer} wins!`)
+                    } else if (gameBoard[6] === currentPlayer &
+                        gameBoard[7] === currentPlayer &
+                        gameBoard[8] === currentPlayer) {
+                            alert(`${currentPlayer} wins!`)
+                        } else if (gameBoard[2] === currentPlayer &
+                            gameBoard[5] === currentPlayer &
+                            gameBoard[8] === currentPlayer) {
+                                alert(`${currentPlayer} wins!`)
+                            } else if (gameBoard[1] === currentPlayer &
+                                gameBoard[4] === currentPlayer &
+                                gameBoard[7] === currentPlayer) {
+                                    alert(`${currentPlayer} wins!`)
+                                } else if (gameBoard[0] === currentPlayer &
+                                    gameBoard[4] === currentPlayer &
+                                    gameBoard[8] === currentPlayer) {
+                                        alert(`${currentPlayer} wins!`)
+                                    } else if (gameBoard[2] === currentPlayer &
+                                        gameBoard[4] === currentPlayer &
+                                        gameBoard[6] === currentPlayer) {
+                                            alert(`${currentPlayer} wins!`)
+                                        }
+        }
+
+        function restart() {
+           var gameBoard = []
+           cell.innerText = ''
+        }
