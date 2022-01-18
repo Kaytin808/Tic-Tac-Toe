@@ -9,6 +9,12 @@ header {
     background-color: #292F36;
     height: 200px;
 }
+.player_turn {
+    position: relative; 
+    left: 813px;
+    top: 21px;
+    font-size: 33px;
+}
 h1 {
     font-family: 'Times New Roman', Times, serif;
     color: rgb(231, 231, 231);
