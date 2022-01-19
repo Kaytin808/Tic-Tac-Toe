@@ -6,4 +6,4 @@ Things I learned for this project:
 - Checking for a tie if all box's have been filled
 Live preview link : https://kaytin-tic-tac-toe.netlify.app/
 
-<img src ="https://i.ibb.co/nCJ8jsC/Screenshot-2022-01-18-at-22-24-25-Tic-Tac-Toe.png" width="400" height ="500">
+<img src ="https://i.ibb.co/nCJ8jsC/Screenshot-2022-01-18-at-22-24-25-Tic-Tac-Toe.png" width="500" height ="650">
