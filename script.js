@@ -39,7 +39,6 @@ function handleClick(e) {
         checkWinner()
           }
     }
-
 // restart game after win/tie 
 function restart() {
     gameBoard = [];
@@ -50,13 +49,11 @@ function restart() {
      player_turn.innerText = "Player 1's turn"
  })
 }
-
 // When cells are clicked run this function //
     cell.forEach((box1) => {
         box1.addEventListener('click', handleClick)
     })
-
-
+// Check for win combos
 function checkWinner() {
     if (gameBoard[0] === currentPlayer &
          gameBoard[1] === currentPlayer &
